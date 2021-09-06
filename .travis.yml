@@ -5,9 +5,6 @@ services:
 before_install:
   - docker build -t sadiqkarur/react-docker -f Dockerfile  .
 
-script:
-  - docker run sadiqkarur/react-docker npm run test -- --coverage
-
 
 deploy:
   provider: heroku
