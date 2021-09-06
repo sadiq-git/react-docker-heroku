@@ -3,10 +3,11 @@ services:
   - docker
 
 before_install:
-  - docker build -t sadiqkarur/react-docker -f Dockerfile  .
+  - docker build -t sadiqkarur/react-docker .
 
 
 deploy:
   provider: heroku
+  app:react-docker-hero
   api_key:
     secure: "i6ikMkTEHwYJ2U7qx1wydVs8S9wxdZiWk9aoO103z8Oa1tWApAZqsut9/Two9L9xcHet47wyf8tHFNg/TUvvRIsJYMnvmTwZi1QKp5YsFwmiUxpNGGNLxTu/+T3etY/k/ni0jl9l5y6BtPXDj/9j1HVeGwA/FJPy1YBSrf6YQgPAJ0y+Dn9A200VCkkkg9uY5tkbqyxQ/XlehaJj1prGaU+oF3M1qPoWXrmNYRMc7o/lmh8c/Myifj23485bD7cvvHLyxgPcUpVbayz/w6S2wSwGv7GPTxxEsj8l3h50PM15083wwR/P+joVv8ENRvSQrgAL071Uhq8QIWPJ0BT+mo0ys5lTs5JvO2DIH3imUB2Vys0RuR6sFTKk8ieJJzoPmj3VS/Ff2RREyIausgrE0vebBUowbnqx8Fem7MCvtwO0qvx5sJ1MAmQhD3drpRYSZ+FPa3+FNHbEdUBC+n0iZTH4gt6cgkUinux6VdA5r4hcjAcUVp9eZt1TBmILTGcq+KK6nNG1EbnKDZsBt6W2Gfo81Qp3eFjRziikw0nmvKAblWl8QhmM4Q8l5/WFpck8mLg+7Tq12YfSi/8PIA6nSAGB2AmhMug3ApCy1aNY+75G4vL9gLENs6rMy7Lp9KkFgT7BuY+SIEhRm3qApsEs2pGk7zYkfPCrQrKcZFaPLu0="
