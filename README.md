@@ -66,6 +66,4 @@ This example uses the following open source libraries:
 
 Please post any questions as issues in this repository, or visit our [Okta Developer Forums](https://devforum.okta.com/).
 
-## License
 
-Apache 2.0, see [LICENSE](LICENSE).
