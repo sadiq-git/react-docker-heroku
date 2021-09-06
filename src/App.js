@@ -1,21 +1,22 @@
-import React from 'react';
-import { Calendar } from './Calendar';
+import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { LoginCallback, SecureRoute, Security } from '@okta/okta-react';
+import Nav from './components/nav';
+import Footer from './components/footer';
+import MainContainer from './components/main-container';
 
-function App() {
-  return (
-    <Router>
-      <Security issuer='https://dev-8480514.okta.com/oauth2/default'
-                clientId='0oa1ntxyjsb3WwCqO5d7'
-                redirectUri={window.location.origin + '/callback'}
-                pkce={true}>
-        <SecureRoute path='/' exact={true} component={Calendar}/>
-        <Route path='/callback' component={LoginCallback}/>
-      </Security>
-    </Router>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Nav />
+
+        <MainContainer />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
